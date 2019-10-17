@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#cecec4"
+    tools:context=".luces_control_sms">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chovi3"
+        android:elevation="4dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/tv_destino1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:text="Create by. Manuel de Jesús Gámez López\nCopyright (c) 2018-2019 . All rights reserved."
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:background="@color/chovi3"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        />
+
+    <Spinner
+        android:id="@+id/combo"
+        style="@style/Platform.Widget.AppCompat.Spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:drawSelectorOnTop="true"
+        android:spinnerMode="dialog"
+        android:elevation="4dp"
+        android:background="#cecec4"
+        android:textAlignment="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--
+                <TextView
+                    android:id="@+id/texto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GSM CONTROL [SMS]"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#6b191f"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />-->
+
+                <!--<Spinner
+                    android:id="@+id/combo"
+                    style="@style/Platform.Widget.AppCompat.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dialog"
+                    android:elevation="4dp"
+                    android:background="#fff"
+                    android:textAlignment="center" />-->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnLuz1"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #1"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnLuz2"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #2"
+                        android:textColor="#1a1b1a"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--android:background="@drawable/borde_redondo1"-->
+                    <Button
+                        android:id="@+id/btnLuz3"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #3"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnLuz4"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #4"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnLuz5"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #5"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnLuz6"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #6"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnLuz7"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #7"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnLuz8"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado luminaria #8"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnLuzTodas"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCambiar estado todas luces"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnRetornar"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_home"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nGo\nHome"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <!--<Button
+                        android:id="@+id/btnEstadoLuces"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_luz1"
+                        android:fontFamily="cursive"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Entrada SMS~Info Estado Luces\n********************"
+                        android:textColor="#1a1b1a"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />-->
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnTempHumedad"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_info1"
+                        android:fontFamily="cursive"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Entrada SMS~Info Temperatura y RH\n********************"
+                        android:textColor="#1a1b1a"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnRetornar"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_home"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Go\nHome\n********************"
+                        android:textColor="#1a1b1a"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>-->
+
+
+                <TextView
+                    android:id="@+id/tv_destino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#b31313"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

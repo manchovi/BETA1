@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chovi2"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System Settings"
+            android:fontFamily="serif-monospace"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".90"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/BtnCerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close2"
+                android:layout_marginRight="7dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circulo3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <!--inicio-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/cuadro"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvId0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:paddingLeft="6dp"
+                    android:text="Número de teléfono del propietario de este celular"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cuadro1"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/etTelefonoPropietario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textSize="14dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:hint="Número de teléfono" />
+
+            </LinearLayout>
+        <!--fin-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cuadro"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tvId1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:paddingLeft="6dp"
+            android:text="Número de teléfono del sistema electrónico"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/cuadro1"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/etTelefono1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textSize="14dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:hint="Número de teléfono" />
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cuadro"
+        android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/tvId2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="6dp"
+        android:text="Número de teléfono con el que se compartirá información via SMS"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/cuadro1"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etTelefono2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:hint="Número de teléfono" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cuadro"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/tvId3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="6dp"
+        android:text="Dirección de correo con el que se compartirá información"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/cuadro1"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etdireccioncorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:hint="tesis@utla.edu.sv" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cuadro"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/tvId4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="6dp"
+        android:text="Dirección MAC del dispositivo Bluetooth Receptor"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/cuadro1"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etMacBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:hint="20:16:12:12:19:57" />
+    <!--android:entries="@array/interrogantes"-->
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:paddingLeft="6dp"
+        android:text="Fecha de creación de la configuración" />
+
+    <TextView
+        android:id="@+id/tvFechaHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:paddingLeft="6dp"
+        android:text="2018-00-00 00:00:00" />
+
+    <!--<Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Actualizar Registro" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_marginTop="0dp"
+        android:gravity="right"
+        >
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Cancelar"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="#9c0308" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="***"
+            />
+
+        <Button
+            android:id="@+id/btnAplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#9c0308"
+            android:background="@android:color/transparent"
+            android:alpha="1"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:text="Aplicar" />
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

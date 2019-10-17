@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/grad_bg4"
+    tools:context=".Splashscreen">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" >
+        -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Universidad Técnica Latinoamericana"
+            android:textColor="@color/gray1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            />
+
+    <ImageView
+        android:id="@+id/imgView_logo"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/utla1" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:textAlignment="center"
+        android:tooltipText="Loading..."
+        />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray1"
+            android:text="TESIS\n\nPARA OPTAR AL GRADO DE:\nINGENIERO EN ELECTRÓNICA"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold|italic|normal"
+            android:layout_marginTop="450dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manuel de Jesús Gámez López.\nJaime Alejandro Ochoa Rivas\nJosé Enmanuel Urías Guzmán"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#3838f4"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray1"
+            android:text="Santa Tecla, 2018-2019"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold|italic|normal"
+            android:layout_marginTop="550dp"/>
+
+    </RelativeLayout>
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            &lt;!&ndash;<TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#010389"
+                android:text="DESARROLLO DE UN SISTEMA DE MONITOREO Y CONTROL DE LUCES; ASÍ COMO EL MONITOREO DE LA TEMPERATURA Y HUMEDAD RELATIVA EN EL LABORATORIO DE ELECTRÓNICA."
+                android:textAlignment="center"
+                android:textStyle="bold|italic|normal"
+                android:layout_marginTop="10dp"
+                android:textSize="10dp"
+                />&ndash;&gt;
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/utla" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="Universidad Técnica LatinoAmericana."
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_below="@+id/imageView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_alignBottom="@+id/gifImageView"
+                android:layout_alignEnd="@+id/gifImageView" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1b1c41"
+                android:text="TESIS\nPARA OPTAR AL GRADO DE:\nINGENIERO ELECTRÓNICO.\n\nSanta Tecla, 2018-2019"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold|italic|normal"
+                android:layout_marginTop="30dp"
+                />
+
+            &lt;!&ndash;<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#af0000"
+                android:layout_marginTop="100dp">
+
+            </LinearLayout>&ndash;&gt;
+
+        </LinearLayout>
+    </ScrollView>-->
+
+</RelativeLayout>

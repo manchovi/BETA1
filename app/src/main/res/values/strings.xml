@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">UTLA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_bt">BT</string>
+
+    <string name="textAbajo">Estado actual de esta luminaria es: OFF</string>
+    <string name="textAbajo1">Estado actual: OFF</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_led_control">ledControl</string>
+    <string name="control_led_y_ventilador">Control Led y Ventilador</string>
+    <string name="brillo">Brillo</string>
+    <string name="on_led">ENCENDER FOCO 1</string>
+    <string name="off_led">APAGAR FOCO 1</string>
+    <string name="on_ventilador">ENCENDER FOCO 2</string>
+    <string name="off_ventilador">APAGAR FOCO 2</string>
+    <string name="on_all">ENCENDER TODO</string>
+    <string name="off_all">APAGAR TODO</string>
+    <string name="desconectar">Desconectar</string>
+    <string name="dispositivos_vinculados">Dispositivos Vinculados</string>
+    <string name="ayudabt">
+        ----------------------------------------------------\n
+        Verificar la siguiente lista:\n
+        --> Aparear módulos BT (Celular y Circuito).\n
+
+            Nota: No es necesario esta App para \n
+                  hacer el emparejamiento.\n
+
+        --> Asegurarse de tener encendido el BT.\n
+        --> Identificar el nombre del dispositivo BT.\n
+        --> Establecer una conexión con el BT.\n\n
+        Contacto: manuel.gamez@itca.edu.sv
+
+        ----------------------------------------------------
+    </string>
+
+    <string name="noconnection">Sres. UTLA, Lamentamos informar que, actualmente su dispotivo inteligente no
+        cuenta con una conexión segura a INTERNET.\n\n
+
+        SUGERENCIAS.\n
+        ***Habilite sus datos móviles o,\n
+        ***Conecte su dispositivo móvil a una red WiFi. \n
+        \n
+
+        Sin embargo, le informamos que esta App,
+        la puede seguir utilizando en caso que,
+        su servidor de datos este dentro de la red corporativa.
+        \n
+    </string>
+    <string name="ok">Aceptar</string>
+    <string name="error">Información.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="RespuestaSaludo">GSM - SMS</string>
+
+    <string name="positive_popup_text_default">Aca se muestra la información enviada por el circuito como respuesta a la petición de un saludo.</string>
+    <string name="positive_popup_title_default">Like a boss!</string>
+    <string name="negative_popup_text_default">You have failed to complete the challenge. So close! Wanna have another go at it?</string>
+    <string name="negative_popup_title_default">Awww... Snap!</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="usuario"><u>Registrarme ahora</u></string>
+    <string name="clave"><u>¿Se te olvidó tu contraseña?</u></string>
+    <string name="register"><u><b><i>Copyright</i></b></u></string>
+
+    <string name="msj1">SERVIDOR ONLINE O LOCAL</string>
+    <string name="dominio">Dominio o IP</string>
+    <string name="directorio">Directorio API o Web service</string>
+    <string name="portal">Directorio Portal Web</string>
+
+
+    <array name="interrogantes">
+        <item>¿Cuál es el nombre de tu universidad favorita?</item>
+        <item>¿Cuál es la ubicación de tu universidad favorita?</item>
+        <item>¿Cuál es el nombre de tu profesor favorito?</item>
+        <item>¿Cuál es el nombre de tu materia favorita?</item>
+        <item>¿Cuál es el nombre de tu profesor de laboratorios?</item>
+        <item>¿Cuál es el año que vas egrasar de tu carrera universitaria?</item>
+        <item>¿Cuál es el nombre de tu mascota favorita?</item>
+        <item>¿Cuál es el nombre de tu mejor amig@?</item>
+        <item>¿Cuál es el número de tu primer celular?</item>
+        <item>¿Cuál es el nombre de tu primer novi@?"</item>
+        <item>¿Cuál es el lugar de tu nacimiento?</item>
+        <item>¿Cuál es tu color favorito?</item>
+        <item>¿Cuál es el color de tu vehículo?</item>
+        <item>¿Cuál es la fecha de tu nacimiento?</item>
+        <item>¿Cuál es el nombre de tu hijo(a) favorito?</item>
+    </array>
+
+    <string name="title_graf1">[Temperatura °C: Humedad Relativa [%]]</string>
+
+</resources>

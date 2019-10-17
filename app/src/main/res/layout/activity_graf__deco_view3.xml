@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#b4b49a"
+    tools:context=".graf_DecoView">
+
+    <!--android:background="#484545"-->
+
+    <include layout="@layout/header_footer" />
+    <!--
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:text="Lecturas de los sensores"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="cursive"
+                android:textColor="@color/chovi"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Humedad Relativa y Temperatura"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="serif-monospace"
+                android:textColor="@color/chovi"
+                />
+
+        <!--Gráfica de humedad-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".50"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Humedad Relativa [%] RH"
+                    android:textStyle="bold|italic"
+                    android:textSize="20sp"
+                    android:textColor="#020202"
+                    android:gravity="center" />
+                <com.hookedonplay.decoviewlib.DecoView
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+
+                    android:id="@+id/dynamicArcView"/>
+
+                <!--
+                android:paddingBottom="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="25dp"
+                -->
+
+                    <TextView
+                        android:id="@+id/tv_porciento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:text="%"
+                        android:textColor="@color/chovi2"
+                        android:textSize="40sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#403d3d"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--Gráfica de temperatura-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperatura [°C]"
+                            android:textStyle="bold|italic"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:gravity="center" />
+                        <com.hookedonplay.decoviewlib.DecoView
+                            xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="25dp"
+                            
+                            android:id="@+id/dynamicArcView1"/>
+                    <!--
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:paddingRight="25dp"
+                            android:paddingLeft="25dp"
+                    -->
+
+                        <TextView
+                            android:id="@+id/tv_porciento1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:text="°C"
+                            android:textColor="@color/chovi2"
+                            android:textSize="40sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#403d3d"
+                        />
+                </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--Deshabilidatdo porque me salio más facíl copiar lo de arriba-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight=".50"
+            android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temperatura"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+                <com.hookedonplay.decoviewlib.DecoView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dynamicArcView1"/>
+                <TextView
+                    android:id="@+id/tv_porciento1"
+                    android:textSize="60sp"
+                    android:text="hola"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>-->
+
+
+        </LinearLayout>
+
+</RelativeLayout>

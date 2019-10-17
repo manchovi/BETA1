@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/config_userMaster"
+            android:icon="@drawable/ic_settings"
+            android:title="Configuración Master" />
+
+        <item
+            android:id="@+id/control_bt"
+            android:icon="@drawable/ic_bluetooth"
+            android:title="Control Bluetooth Click" />
+
+        <item
+            android:id="@+id/control_bt1"
+            android:icon="@drawable/ic_bluetooth"
+            android:title="Control Bluetooth Voz" />
+
+        <item
+            android:id="@+id/control_sms"
+            android:icon="@drawable/ic_sms"
+            android:title="Control Luz Simple [SMS]" />
+
+        <item
+            android:id="@+id/control_sms1"
+            android:icon="@drawable/ic_sms"
+            android:title="Control Luz Multiple [SMS]" />
+
+
+        <item
+            android:id="@+id/g_linea"
+            android:icon="@drawable/chart_line"
+            android:title="Gráfica Líneal [T-H]" />
+        <item
+            android:id="@+id/g_barra"
+            android:icon="@drawable/chart_bar"
+            android:title="Gráfica Barra [T-H]" />
+        <item
+            android:id="@+id/g_pastel"
+            android:icon="@drawable/chart_arc"
+            android:title="Gráfica Pastel [T-H]" />
+
+        <item
+            android:id="@+id/sms_social"
+            android:icon="@drawable/whatsapp"
+            android:title="Enviar SMS Red Social" />
+
+        <item
+            android:id="@+id/sms_celular"
+            android:icon="@drawable/ic_phone"
+            android:title="Enviar SMS a Celular" />
+
+        <item
+            android:id="@+id/correo_automatico"
+            android:icon="@drawable/ic_contact_mail"
+            android:title="Enviar a E-mail" />
+
+        <item
+            android:id="@+id/ubicanos"
+            android:icon="@drawable/ic_location"
+            android:title="¿Como llegar UTLA?" />
+
+<!--
+        <item
+            android:id="@+id/segundo_plano"
+            android:icon="@drawable/ic_hearing"
+            android:title="Habilitar Monitoreo 2do.Plano" />
+-->
+
+    </group>
+
+    <item android:title="Otros">
+        <menu>
+            <item
+                android:id="@+id/acercade"
+                android:icon="@drawable/ic_contacts"
+                android:title="Creado por" />
+            <item
+                android:id="@+id/cerrar_sesion"
+                android:icon="@drawable/ic_cerrar"
+                android:title="Cerrar sesión" />
+        </menu>
+    </item>
+
+</menu>

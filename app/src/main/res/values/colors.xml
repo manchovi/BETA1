@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+    <color name="colorPrimary">#23A7D8</color>
+    <color name="colorPrimaryDark">#02a1dc</color>
+    <color name="colorAccent">#0b388e</color>
+    <!--<color name="colorAccent">#64e6df</color>-->
+    <!--<color name="colorAccent">#23A7D8</color>-->
+
+    <color name="colortextobutton">#1a1b1a</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#100e0e</color>
+    <color name="transparent">#00000000</color>
+    <color name="gradStart">#19AA8B</color>
+    <color name="gradStop">#23A7D8</color>
+
+    <color name="material">#23A7D8</color>
+    <color name="gray1">#565454</color>
+
+    <!--
+    <color name="colorPrimary">#da0320</color>
+    <color name="colorPrimaryDark">#272827</color>
+    <color name="colorAccent">#f7a40609</color>
+    <color name="colorLighGrey">#ededed</color>
+    -->
+
+    <!--INICIO: COLORES PARA EL POPUP1 PERSONALIZADO-->
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#2f333f</color>
+    <color name="bluelight">#49acd5</color>
+    <color name="green">#45bc62</color>
+    <color name="orange">#eaad43</color>
+    <color name="colorAccent1">#FF4081</color>
+    <!--FIN: COLORES DEL POPUP1-->
+    
+    
+    <!--inicio: Colores para ventanas popup2-->
+    <color name="colorPrimary2">#848cb7</color>
+    <color name="colorPrimaryDark2">#6d749f</color>
+    <color name="colorRed">#ff3943</color>
+    <color name="colorRedDark">#801b20</color>
+    <color name="colorGreenLight">#abffc0</color>
+    <color name="colorGreen">#247b37</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAccent2">#FF4081</color>
+    <color name="gray">#2f333f</color>
+    <!--Fin: Colores popup2-->
+
+
+    <!--<color name="colorAccent">#f7ff126d</color>-->
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yellow">#ffb300</color>
+    <color name="green1">#00bfa5</color>
+    <color name="blue">#000579</color>
+
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="ColorPrimary2">#F44336</color>
+    <color name="ColorPrimaryDark2">#D32F2F</color>
+    <color name="ColorAccent2">#2196F3</color>
+
+
+    <color name="mycolor">#01097b</color>
+    <color name="mycolor_blanco">#ffffff</color>
+    <color name="color_subtitle">#d60404</color>
+
+    <color name="green_flat">#2ecc71</color>
+    <color name="red_flat">#e74c3c</color>
+
+    <!--#02083e
+    <color name="chovi1">#fc5000</color>
+    -->
+    <color name="chovi">#03003e</color>
+    <color name="chovi2">#505252</color>
+    <color name="chovi3">#930d0f</color>
+    <color name="chovi4">#F30003</color>
+    <color name="chovi1">#000005</color>
+    <color name="chovi5">#464141</color>
+
+    <color name="colortexto">#ffffff</color>
+
+    <color name="grafica">#5e5a8f</color>
+</resources>

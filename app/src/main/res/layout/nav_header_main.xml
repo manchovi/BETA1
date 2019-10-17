@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/chovi3"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <!--android:gravity="bottom"
+    android:background="@drawable/fondo1"
+    -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/utla1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:textSize="12dp"
+        android:textColor="#FDFDFF"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Trabajo de graduación [2018-2019]"
+        android:fontFamily="cursive"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:textSize="12dp"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Grado: Ing. en Electrónica"
+        android:fontFamily="cursive"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="5dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:text="manuel.gamez@itca.edu.sv"
+        android:fontFamily="cursive"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:paddingLeft="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="cursive"
+        android:text="Sistema de Control/Monitoreo BT,GSM/GPRS,WEB..." />
+
+</LinearLayout>

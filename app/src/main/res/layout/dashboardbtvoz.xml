@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="178dp"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#505252"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:elevation="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".11"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MONITOR BLUETOOTH VOZ"
+                android:fontFamily="serif-monospace"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".90"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_marginRight="0dp">
+
+            <TextView
+                android:id="@+id/xClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textColor="#FFFFFF"
+                android:text="X"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:background="@drawable/circulo2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:textAlignment="textEnd"
+            android:paddingRight="10dp"
+            android:text="ACEPTAR"
+            android:background="#505252"
+            />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#000000"
+                android:layout_marginTop="33dp"/>
+
+                <LinearLayout
+                    android:background="#A8A9AD"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/ivFoco1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:src="@drawable/foco1off"
+                        android:tooltipText="Luminaria 1"
+                        android:background="@drawable/cuadro"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivFoco2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:src="@drawable/foco1off"
+                        android:tooltipText="Luminaria 2"
+                        android:background="@drawable/cuadro"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivFoco3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:src="@drawable/foco1off"
+                        android:tooltipText="Luminaria 3"
+                        android:background="@drawable/cuadro"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivFoco4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:src="@drawable/foco1off"
+                        android:tooltipText="Luminaria 4"
+                        android:background="@drawable/cuadro"
+                        />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:background="#237397"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivFoco5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:src="@drawable/foco1off"
+                android:tooltipText="Luminaria 5"
+                android:background="@drawable/cuadro"
+                />
+
+            <ImageView
+                android:id="@+id/ivFoco6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:src="@drawable/foco1off"
+                android:tooltipText="Luminaria 6"
+                android:background="@drawable/cuadro"
+                />
+
+            <ImageView
+                android:id="@+id/ivFoco7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:src="@drawable/foco1off"
+                android:tooltipText="Luminaria 7"
+                android:background="@drawable/cuadro"
+                />
+
+            <ImageView
+                android:id="@+id/ivFoco8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:src="@drawable/foco1off"
+                android:tooltipText="Luminaria 8"
+                android:background="@drawable/cuadro"
+                />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

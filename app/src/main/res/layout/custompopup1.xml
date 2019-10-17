@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FAF7F7"
+    android:padding="5dp"
+    android:layout_gravity="center">
+    <!--
+    #4D4848
+        @drawable/fondo38
+        android:background="#bcb9b9"
+        android:background="@drawable/buttonstyle"
+        android:background="@color/colorPrimaryDark1"
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".11"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/chovi3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desarrollador Android"
+                android:fontFamily="serif-monospace"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".90"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_marginRight="0dp"
+            android:background="@color/chovi3"
+            >
+
+            <TextView
+                android:id="@+id/txtclose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textColor="#03A9F4"
+                android:text="X"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:background="@drawable/circulo0"/>
+
+            <!--<ImageView
+                android:id="@+id/BtnCerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close2"
+                android:layout_marginRight="7dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circulo3" />-->
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="#000000"
+        android:text="X"
+        android:layout_marginRight="3dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/cerclebackground"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/photo3"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manuel de Jesús Gámez López."
+            android:textStyle="bold"
+            android:textColor="#030303"
+            android:fontFamily="cursive"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tel: (+503)61107065"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail: manuel.gamez@itca.edu.sv"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tecoluca/San Vicente, El Salvador"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/orange"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnico"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0e1bd2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mantenimiento de Computadoras"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#212121"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="ITCA-FEPADE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#252323"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/green"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnico"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0e1bd2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ing. En Sistemas y Redes Informáticos"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#212121"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="ITCA-FEPADE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#252323"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/lightgray"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Licenciatura"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0e1bd2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciencias de la computación"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#212121"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="ULS"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#252323"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tesis para optar grado: Ing. en Electrónica"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="UTLA"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/btnfollow"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="Follow Me"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonstyle1"
+        android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="8dp"
+                android:textColor="@color/black"
+                android:text="***Hacer ciencia por hobby, ponerte retos, superar los tropiezos más duros y trabajar con pasión en el objetivo o meta propuesta, es la clave para alcanzar el éxito de todo proyecto que se quiera emprender. ¡Nunca parar de aprender! \nbY Chovi Gámez."
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

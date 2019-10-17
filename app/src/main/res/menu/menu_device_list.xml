@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".DeviceList">
+    <item android:id="@+id/opEncenderBT"
+        android:title="Encender Bluetooth"
+        android:icon="@drawable/ic_bluetooth"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/opApagarBT"
+        android:title="Apagar Bluetooth"
+        android:icon="@drawable/ic_bluetooth"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/opDispositivosVinculados"
+        android:title="Dispositivos vinculados"
+        android:icon="@drawable/ic_bluetooth"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/opGOMenu"
+        android:title="Go Menú"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/opGOHelp"
+        android:title="Ayuda"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <!--<item
+        android:id="@+id/menu_mapa"
+        android:title="Ubicación"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom|withText"/>-->
+
+
+
+</menu>

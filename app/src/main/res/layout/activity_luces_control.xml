@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:orientation="vertical"
+    android:background="#cecec4"
+    tools:context=".luces_control">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chovi3"
+        android:elevation="4dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+<!--android:background="?colorPrimary"-->
+
+    <TextView
+        android:id="@+id/tv_destino1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:text="Create by. Manuel de Jesús Gámez López\nCopyright (c) 2018-2019 . All rights reserved."
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:background="@color/chovi3"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:text="Receiver:..."
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:background="@color/gray"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtGabar"
+                    android:textSize="1sp"
+                    android:gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/texto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BLUETOOTH CONTROL"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#6b191f"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--<Button
+                        android:id="@+id/btnLuz1"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:padding="10dp"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #1"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+
+                        />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz1"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz1Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 1"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz1Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <!--<Button
+                        android:id="@+id/btnLuz2"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #2"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz2"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz2Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 2"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz2Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--android:background="@drawable/borde_redondo1"-->
+                    <!--<Button
+                        android:id="@+id/btnLuz3"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #3"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId3"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz3"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz3Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 3"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz3Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <!--<Button
+                        android:id="@+id/btnLuz4"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #4"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId4"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz4"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz4Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 4"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz4Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--<Button
+                        android:id="@+id/btnLuz5"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #5"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId5"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz5"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz5Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 5"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz5Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <!--<Button
+                        android:id="@+id/btnLuz6"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #6"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold"  />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId6"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz6"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz6Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 6"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz6Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--<Button
+                        android:id="@+id/btnLuz7"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #7"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId7"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz7"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz7Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 7"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz7Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                   <!-- <Button
+                        android:id="@+id/btnLuz8"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado luminaria #8"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId8"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz8"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz8Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:text="LUMINARIA 8"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz8Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--<Button
+                        android:id="@+id/btnLuzTodas"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado todas luces"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId9"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz9"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/f2off"
+                                android:paddingTop="6dp" />
+                            <TextView
+                                android:id="@+id/tvLuz9Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:textAlignment="center"
+                                android:layout_marginTop="5dp"
+                                android:text="CAMBIAR ESTADO\nTODAS LUCES"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="3dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz9Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"
+                                android:visibility="visible"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <!--<Button
+                        android:id="@+id/btnTempHumedad"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_termometro1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCONSULTA ESTADO\n[ °C ] ~ R.H. [%]"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId10"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/ivLuz10"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/termometro"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz10Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:textAlignment="center"
+                                android:layout_marginTop="0dp"
+                                android:text="CONSULTA ESTADO\n[ °C ] ~ R.H. [%]"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_marginTop="6dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz10Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="T. [°C] : RH: [%]"
+                                android:paddingBottom="1dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/chovi"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--<Button
+                        android:id="@+id/btnLuzTodas"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCambiar estado todas luces"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId99"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/btnEstadoLuces"
+                                android:layout_width="84dp"
+                                android:layout_height="84dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/focooff"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz12Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:textAlignment="center"
+                                android:layout_marginTop="5dp"
+                                android:text="CONSULTA ESTADO\nLUCES"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="5dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz99Bajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/textAbajo1"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/chovi"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <!--<Button
+                        android:id="@+id/btnTempHumedad"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:drawableTop="@drawable/ic_termometro1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nCONSULTA ESTADO\n[ °C ] ~ R.H. [%]"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:id="@+id/bankcardId15"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_mov">
+                            <ImageView
+                                android:id="@+id/btnRetornar"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/cerclebackgroundpink"
+                                android:src="@drawable/ic_home1"
+                                android:padding="0dp"/>
+                            <TextView
+                                android:id="@+id/tvLuz13Alto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:textAlignment="center"
+                                android:layout_marginTop="5dp"
+                                android:text="RETORNAR\nMENÚ PRINCIPAL"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_marginTop="6dp"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+               <!-- <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnEstadoLuces"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_foco"
+                        android:gravity="center"
+                        android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\nConsulta Estado\n Luces"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnRetornar"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawablePadding="0dp"
+                        android:padding="10dp"
+                        android:drawableTop="@drawable/ic_home"
+                        android:gravity="center"
+                        android:text="Go\nHome\n"
+                        android:textColor="@color/colortextobutton"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_destino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Copyright UTLA - 2018"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="#b31313"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

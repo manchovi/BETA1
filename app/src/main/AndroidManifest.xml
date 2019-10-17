@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mjgl.utla.utla">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Desarrollo Android: Obtener número de teléfono desde la aplicación -->
+    <!-- http://jonsegador.com/2011/11/android-obtener-numero-telefono-desde-aplicacion/ -->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS" />-->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/utla1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.mjgl.utla.utla.smsInput"></activity>
+        <activity
+            android:name="com.mjgl.utla.utla.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.mjgl.utla.utla.BT"
+            android:label="@string/title_activity_bt"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mjgl.utla.utla.device_list"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.mjgl.utla.utla.luces_control"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.mjgl.utla.utla.luces_control_sms"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity android:name="com.mjgl.utla.utla.Splashscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mjgl.utla.utla.Recibir_SMS" />
+
+        <receiver
+            android:name="com.mjgl.utla.utla.ReceptorSMS6"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.mjgl.utla.utla.DashboardLuces" />
+        <activity android:name="com.mjgl.utla.utla.graficaBarrasTH" />
+        <activity android:name="com.mjgl.utla.utla.configuracionUserMaster" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.mjgl.utla.utla.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="com.mjgl.utla.utla.login" />
+        <activity android:name="com.mjgl.utla.utla.ListaUsuarios" />
+        <activity android:name="com.mjgl.utla.utla.graphic_dificult" />
+        <activity android:name="com.mjgl.utla.utla.pruebas" />
+        <activity android:name="com.mjgl.utla.utla.graficalinea" />
+        <activity android:name="com.mjgl.utla.utla.graficabarra" />
+        <activity android:name="com.mjgl.utla.utla.graficapastel" />
+        <activity android:name="com.mjgl.utla.utla.controlporvoz" />
+        <activity android:name="com.mjgl.utla.utla.graf_DecoView" />
+        <activity android:name="com.mjgl.utla.utla.graf_DecoView_OK" />
+        <activity android:name="com.mjgl.utla.utla.llamada" />
+        <activity android:name="com.mjgl.utla.utla.VisorWeb"></activity>
+    </application>
+
+</manifest>

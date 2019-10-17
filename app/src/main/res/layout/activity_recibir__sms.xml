@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg4"
+    tools:context=".Recibir_SMS"
+    android:layout_margin="0dp" >
+
+    <TextView
+        android:id="@+id/tv_destino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:text="Create by. Manuel de Jesús Gámez López\nCopyright (c) 2018-2019 . All rights reserved."
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:background="@color/chovi3"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chovi3"
+        android:elevation="4dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/utla1" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Universidad Técnica Latinoamericana"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#6e6d6d"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center" />
+    <!--<TextView
+        android:id="@+id/Titulo1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="UTLA"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#f70303"
+        android:textAlignment="center" />-->
+    <TextView
+        android:id="@+id/Titulo2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Control y Monitoreo"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:textColor="#835757"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/Titulo3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="GSM / GPRS"
+        android:fontFamily="serif-monospace"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="#835757"
+        android:textAlignment="center" />
+
+    <!--<TextView
+        android:id="@+id/NA"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS RECEIVED"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#f70303"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/NA1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Solo Número Autorizado"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="#f70303"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center" />-->
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message From : "
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="#585858"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message : "
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textColor="#585858"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <!--<TextView
+        android:id="@+id/message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Otro: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#f70303"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />-->
+
+            <TextView
+                android:id="@+id/fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha : "
+                android:textSize="14dp"
+                android:textColor="#585858"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <TextView
+            android:id="@+id/hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora : "
+            android:textSize="14dp"
+            android:textColor="#585858"
+            android:layout_marginTop="8dp"
+                android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/espacio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#88c2df"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

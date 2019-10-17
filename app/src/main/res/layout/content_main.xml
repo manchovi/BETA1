@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#b4b49a"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <!--android:background="@drawable/f1on"-->
+
+    <TextView
+        android:id="@+id/tv_destino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/chovi3"
+        android:elevation="4dp"
+        android:text="Create by. Manuel de Jesús Gámez López\nCopyright (c) 2018-2019 . All rights reserved."
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnConfiguracion"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_settings"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nConfiguraciones\nSistema\n[User Master]"
+                        android:textColor="#000000"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnServerSource"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_servidor"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nServidor\nFuente de datos\n[UTLA]"
+                        android:textColor="#000000"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnPerfilUser"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_supervisor_account"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nINFORMACIÓN\n[MI CUENTA]\n"
+                        android:textColor="#000000"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnBtControl"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_bt"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nControl Luces \n[Bluetooth]\n"
+                        android:textColor="#000000"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!--NUEVOS BOTONES BT Y SMS-->
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/BtnGSMControl"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_sms5"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCONTROL LUCES \n[SMS]\n"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnGSMControl1"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_sms"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCONTROL MULTIPLE\nLUCES\n[SMS]\n"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--FIN DE LOS NUEVOS BOTONES-->
+
+
+                <!--INICIO BOTONES CONSULTA TEMPERATURA Y HUMEDAD RELATIVA-->
+                <LinearLayout
+                    android:id="@+id/linear8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/btnEstadoLuces"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/focooo3"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nConsulta Estado Luces\n[SMS]"
+                        android:textColor="#1a1b1a"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btnTempHumedad"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/imgtemperatura"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCONSULTA ESTADO\n[ °C ] ~ R.H. [%]\n[SMS]"
+                        android:textColor="#1a1b1a"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <!--FIN BOTONES-->
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/BtnControl_X_Voz"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_mic1"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nCONTROL LUCES \nCOMANDOS\n[VOZ-BT]\n"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnGraficaLinea"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/chart_line"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="---------------------\nGráfica Líneas \n[ °C ] ~ R.H. [%]\n [SERVIDOR]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <!--android:background="@drawable/borde_redondo1"-->
+                    <Button
+                        android:id="@+id/BtnGraficaBarra"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/chart_bar"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nGráfica Barra \n[ °C ] ~ R.H. [%]\n [SERVIDOR]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnGraficaPastel"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/chart_arc"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nGráfica Pastel \n[ °C ] ~ R.H. [%]\n [SERVIDOR]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+
+                    <Button
+                        android:id="@+id/BtnRedeSociales"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/whatsapp"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nREDES SOCIALES...\n[ °C ] ~ R.H. [%]\n[SERVIDOR]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+
+                    <Button
+                        android:id="@+id/BtnSmsTelefonoTH"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_phone1"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nENVIAR SMS\n[ °C ] ~ R.H. [%]\n[SERVIDOR]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <Button
+                        android:id="@+id/BtnLocalizacion"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_location"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nLOCALIZACIÓN\nUNIVERSIDAD UTLA\n[GPS]"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="**"
+                        android:textColor="#fff"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/BtnAcercade"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/btnRedondo"
+                        android:layout_alignEnd="@+id/btnRedondo"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/btn_mov"
+                        android:drawableTop="@drawable/ic_info2"
+                        android:drawablePadding="0dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="--------------------\nAcerca \nProgramador\n[CREADOR]\n\n"
+                        android:textColor="#000212"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="" />
+
+                <!--<TextView
+                    android:id="@+id/tv_destino"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:text="Create by. Manuel de Jesús Gámez López\nCopyright (c) 2018-2019 . All rights reserved."
+                    android:textColor="#3737df"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:elevation="4dp"
+                    android:background="#ffffff"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    />-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

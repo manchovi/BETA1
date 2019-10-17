@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".luces_control"
+    >
+
+    <item
+        android:id="@+id/opAlluces"
+        android:title="Cambiar Estado Todas Luces"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/opInfoluces"
+        android:title="Consultar Estado Luces"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="2"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/opRetoHacerlo"
+        android:title="Cambio Multiple Estado Luz"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/opCall"
+        android:title="Call me [Perdida]"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
+
+    <!--<item
+        android:id="@+id/opAyuda"
+        android:title="Ayuda"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>-->
+
+    <item
+        android:id="@+id/opSalir"
+        android:title="Salir"
+        android:icon="@drawable/ic_luz11"
+        android:orderInCategory="5"
+        app:showAsAction="never"/>
+
+</menu>
