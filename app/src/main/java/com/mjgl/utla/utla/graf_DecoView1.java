@@ -89,7 +89,7 @@ public class graf_DecoView1 extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor_blanco));
         toolbar.setTitleMargin(0,0,0,0);
         toolbar.setSubtitle("Laboratorio Especializado");
-        toolbar.setSubtitleTextColor(getResources().getColor(R.color.color_subtitle));
+        toolbar.setSubtitleTextColor(getResources().getColor(R.color.white));
         getSupportActionBar().setTitle("UTLA");
 
         //Función para evitar la rotación de la pantalla del CELULAR.

@@ -72,8 +72,8 @@ public class DashboardLuces extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which) {
                             /*Intent intent = new Intent(DashboardLuces.this, luces_control_sms.class);
                             startActivity(intent);*/
-                            DashboardLuces.this.finishAffinity();
-                            //DashboardLuces.this.finish();
+                            //DashboardLuces.this.finishAffinity();
+                            DashboardLuces.this.finish();
                         }
                     })
                     .show();
@@ -96,8 +96,8 @@ public class DashboardLuces extends AppCompatActivity {
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_left));
         toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor_blanco));
         toolbar.setTitleMargin(0, 0, 0, 0);
-        toolbar.setSubtitle("Estado actual de luminarias laboratorio");
-        getSupportActionBar().setTitle("UTLA");
+        toolbar.setSubtitle("UTLA");
+        getSupportActionBar().setTitle("Estado Luminarias");
 
         myDialog = new Dialog(this);
 

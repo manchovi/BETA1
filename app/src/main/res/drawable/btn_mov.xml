@@ -5,4 +5,5 @@
     <item android:state_pressed="true" android:drawable="@drawable/btn_mov_pressed" />
     <item android:state_focused="true" android:drawable="@drawable/btn_mov_focused" />
     <item android:drawable="@drawable/btn_mov_default" />
+
 </selector>

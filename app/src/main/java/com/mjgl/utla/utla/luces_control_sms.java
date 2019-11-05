@@ -56,10 +56,10 @@ public class luces_control_sms extends AppCompatActivity implements  View.OnClic
     superClase superclase = new superClase();
 
     //NUEVO 2020
-    String ENVIADO = "mensaje enviado";
+    /*String ENVIADO = "mensaje enviado";
     String ENTREGADO = "mensaje entregado";
     PendingIntent enviadoPI, entregadoPI;
-    BroadcastReceiver smsSentReceiver, smsDeliveredReceiver;
+    BroadcastReceiver smsSentReceiver, smsDeliveredReceiver;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +79,8 @@ public class luces_control_sms extends AppCompatActivity implements  View.OnClic
         /*Estos dos objetos PendingIntent se utiliza para enviar transmisiones*/
         /*Cuando un mensaje SMS es enviado o entregado*/
         //Nuevo 2020.
-        enviadoPI = PendingIntent.getBroadcast(this, 0, new Intent(ENVIADO), 0);
-        entregadoPI = PendingIntent.getBroadcast(this, 0, new Intent(ENTREGADO), 0);
+        //enviadoPI = PendingIntent.getBroadcast(this, 0, new Intent(ENVIADO), 0);
+        //entregadoPI = PendingIntent.getBroadcast(this, 0, new Intent(ENTREGADO), 0);
 
         //Función para evitar la rotación de la pantalla del CELULAR.
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -149,7 +149,9 @@ public class luces_control_sms extends AppCompatActivity implements  View.OnClic
     }
 
 
+
     //Nuevo 2020
+    /*
     @Override
     public void onResume() {
         super.onResume();
@@ -198,15 +200,16 @@ public class luces_control_sms extends AppCompatActivity implements  View.OnClic
         //Registrar los dos BroadcastReceivers necesarios para notificación.
         registerReceiver(smsDeliveredReceiver, new IntentFilter(ENTREGADO));
         registerReceiver(smsSentReceiver, new IntentFilter(ENVIADO));
-    }
+    }*/
 
+    /*
     @Override
     public void onPause(){
         super.onPause();
         //--unregister the two BroadcastReceivers--
         unregisterReceiver(smsSentReceiver);
         unregisterReceiver(smsDeliveredReceiver);
-    }
+    }*/
 
 
     //String numero = "78484255";
@@ -694,8 +697,8 @@ public class luces_control_sms extends AppCompatActivity implements  View.OnClic
     private void EnviarMensaje(String Numero, String Mensaje) {
         try {
             SmsManager sms = SmsManager.getDefault();
-            //sms.sendTextMessage(Numero, null, Mensaje, null, null);
-            sms.sendTextMessage(Numero, null, Mensaje, enviadoPI, entregadoPI);
+            sms.sendTextMessage(Numero, null, Mensaje, null, null);
+            //sms.sendTextMessage(Numero, null, Mensaje, enviadoPI, entregadoPI);
             //Toast.makeText(getApplicationContext(), "Comando de control enviado.", Toast.LENGTH_LONG).show();
             Toast.makeText(getApplicationContext(), "Comando de control enviado.\n\nDestinatario:" + Numero, Toast.LENGTH_LONG).show();
         } catch (Exception e) {

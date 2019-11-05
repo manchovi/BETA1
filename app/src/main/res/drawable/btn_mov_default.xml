@@ -10,8 +10,8 @@
             -->
     <!--android:color="#605d58"-->
     <stroke
-        android:width="4dp"
-        android:color="#413F3F"
+        android:width="2dp"
+        android:color="#FFFFFF"
         android:dashWidth="0dp"
         android:dashGap="4dp" />
 

@@ -36,7 +36,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:fontFamily="c}"
+                android:fontFamily="cursive"
                 android:textColor="@color/chovi"
                 />
             <TextView
