@@ -93,165 +93,201 @@ public class superClase{
         return server + folder;
     }
 
+    /*private String infoSharedPreferences(Context context) {
+        //Buscando datos en archivo credenciales.xml
+        SharedPreferences preferences = context.getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String server = preferences.getString("servidor", "Sin configurar aun.");
+        String folder = preferences.getString("folder", "Sin configurar aun.");
+        return server + folder;
+    }*/
+
+
     public String infoConfDestinatarioTel2(Context context){
         SharedPreferences preferences = context.getSharedPreferences("Destinatarios", Context.MODE_PRIVATE);
         String t2 = preferences.getString("telefono2","Sin configurar.");
         return t2;
     }
 
-    public void EnviarSMS(final Context context){
-        pd = new ProgressDialog(context);
-        pd.setMessage("Procesando, por favor espere...");
 
-        pd.show();
-        String pc = infoSharedPreferences(context);
-        String url = pc + "/grafica5.php";
-        //String url = pc + "/service/grafica5.php";
+    private String conf_Server(Context context) {
+        //Buscando datos en archivo credenciales.xml
+        SharedPreferences preferences = context.getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String server = preferences.getString("servidor", "Sin configurar.");
+        return server;
+    }
 
-        //String url = "http://" + pc + "/service/grafica5.php";
+    private String conf_folder(Context context) {
+        //Buscando datos en archivo credenciales.xml
+        SharedPreferences preferences = context.getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String folder = preferences.getString("folder", "Sin configurar aun.");
+        return folder;
+    }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                url,
-                new Response.Listener<String>() {
-                    @RequiresApi(api = Build.VERSION_CODES.M)
-                    @SuppressLint("ResourceType")
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("string",response);
-                        try {
-                            //System.out.println("RESPUESTA DE SERVIDOR : "+response);
-                            //Toast.makeText(grafica5.this, response, Toast.LENGTH_LONG).show();
-                            JSONArray jsonarray = new JSONArray(response);
-                            String cadena="";
 
-                            for(int i=0; i < jsonarray.length(); i++) {
-                                JSONObject jsonobject = jsonarray.getJSONObject(i);
-                                double temperatura = jsonobject.getDouble("temperatura");          //Valores de la base de datos.
-                                double humedad = jsonobject.getDouble("humedad");
-                                int luz1 = jsonobject.getInt("luz1");
-                                int luz2 = jsonobject.getInt("luz2");
-                                int luz3 = jsonobject.getInt("luz3");
-                                int luz4 = jsonobject.getInt("luz4");
-                                int luz5 = jsonobject.getInt("luz5");
-                                int luz6 = jsonobject.getInt("luz6");
-                                int luz7 = jsonobject.getInt("luz7");
-                                int luz8 = jsonobject.getInt("luz8");
+    private void mensaje1(Context context) {
+        Toast.makeText(context, "No se ha configurado.", Toast.LENGTH_SHORT).show();
+    }
 
-                                String l1="",l2="",l3="",l4="",l5="",l6="",l7="",l8="";
-                                if(luz1 == 1){
-                                    l1="Encendido";
-                                }else{
-                                    l1="Apagado";
-                                }
 
-                                if(luz2 == 1){
-                                    l2="Encendido";
-                                }else{
-                                    l2="Apagado";
-                                }
 
-                                if(luz3 == 1){
-                                    l3="Encendido";
-                                }else{
-                                    l3="Apagado";
-                                }
+    public void EnviarSMS(final Context context) {
+        String servidor = conf_Server(context);
+        if (servidor.equals("Sin configurar.")) {
+            mensaje1(context);
+        } else {
 
-                                if(luz4 == 1){
-                                    l4="Encendido";
-                                }else{
-                                    l4="Apagado";
-                                }
+            pd = new ProgressDialog(context);
+            pd.setMessage("Procesando, por favor espere...");
 
-                                if(luz5 == 1){
-                                    l5="Encendido";
-                                }else{
-                                    l5="Apagado";
-                                }
+            pd.show();
+            String pc = infoSharedPreferences(context);
+            String url = pc + "/grafica5.php";
+            //String url = pc + "/service/grafica5.php";
 
-                                if(luz6 == 1){
-                                    l6="Encendido";
-                                }else{
-                                    l6="Apagado";
-                                }
+            //String url = "http://" + pc + "/service/grafica5.php";
 
-                                if(luz7 == 1){
-                                    l7="Encendido";
-                                }else{
-                                    l7="Apagado";
-                                }
+            StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                    url,
+                    new Response.Listener<String>() {
+                        @RequiresApi(api = Build.VERSION_CODES.M)
+                        @SuppressLint("ResourceType")
+                        @Override
+                        public void onResponse(String response) {
+                            Log.d("string", response);
+                            try {
+                                //System.out.println("RESPUESTA DE SERVIDOR : "+response);
+                                //Toast.makeText(grafica5.this, response, Toast.LENGTH_LONG).show();
+                                JSONArray jsonarray = new JSONArray(response);
+                                String cadena = "";
 
-                                if(luz8 == 1){
-                                    l8="Encendido";
-                                }else{
-                                    l8="Apagado";
-                                }
+                                for (int i = 0; i < jsonarray.length(); i++) {
+                                    JSONObject jsonobject = jsonarray.getJSONObject(i);
+                                    double temperatura = jsonobject.getDouble("temperatura");          //Valores de la base de datos.
+                                    double humedad = jsonobject.getDouble("humedad");
+                                    int luz1 = jsonobject.getInt("luz1");
+                                    int luz2 = jsonobject.getInt("luz2");
+                                    int luz3 = jsonobject.getInt("luz3");
+                                    int luz4 = jsonobject.getInt("luz4");
+                                    int luz5 = jsonobject.getInt("luz5");
+                                    int luz6 = jsonobject.getInt("luz6");
+                                    int luz7 = jsonobject.getInt("luz7");
+                                    int luz8 = jsonobject.getInt("luz8");
 
-                                String fecha = jsonobject.getString("fecha").trim();
-                                String hora = jsonobject.getString("hora").trim();
+                                    String l1 = "", l2 = "", l3 = "", l4 = "", l5 = "", l6 = "", l7 = "", l8 = "";
+                                    if (luz1 == 1) {
+                                        l1 = "Encendido";
+                                    } else {
+                                        l1 = "Apagado";
+                                    }
 
-                                //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
-                                DateFormat formatodate= new SimpleDateFormat("yyyy/MM/dd");
-                                String date= formatodate.format(new Date());
+                                    if (luz2 == 1) {
+                                        l2 = "Encendido";
+                                    } else {
+                                        l2 = "Apagado";
+                                    }
 
-                                DateFormat formatotime= new SimpleDateFormat("HH:mm:ss a");
-                                String time= formatotime.format(new Date());
+                                    if (luz3 == 1) {
+                                        l3 = "Encendido";
+                                    } else {
+                                        l3 = "Apagado";
+                                    }
+
+                                    if (luz4 == 1) {
+                                        l4 = "Encendido";
+                                    } else {
+                                        l4 = "Apagado";
+                                    }
+
+                                    if (luz5 == 1) {
+                                        l5 = "Encendido";
+                                    } else {
+                                        l5 = "Apagado";
+                                    }
+
+                                    if (luz6 == 1) {
+                                        l6 = "Encendido";
+                                    } else {
+                                        l6 = "Apagado";
+                                    }
+
+                                    if (luz7 == 1) {
+                                        l7 = "Encendido";
+                                    } else {
+                                        l7 = "Apagado";
+                                    }
+
+                                    if (luz8 == 1) {
+                                        l8 = "Encendido";
+                                    } else {
+                                        l8 = "Apagado";
+                                    }
+
+                                    String fecha = jsonobject.getString("fecha").trim();
+                                    String hora = jsonobject.getString("hora").trim();
+
+                                    //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
+                                    DateFormat formatodate = new SimpleDateFormat("yyyy/MM/dd");
+                                    String date = formatodate.format(new Date());
+
+                                    DateFormat formatotime = new SimpleDateFormat("HH:mm:ss a");
+                                    String time = formatotime.format(new Date());
                                 /*String datosCompletos = "SMS UTLA.\n" +
                                         "Temperatura: " + temperatura + " °C\n" +
                                         "Humedad: " + humedad + " RH\n" +
                                         "Fecha: "  + fecha + "\n" +
                                         "Hora: " + hora + "\n" +
                                         "by system UTLA";*/
-                                String datosCompletos="SMS BY SYSTEM UTLA.\n\n" +
-                                        "Estado de Variables del Sistema.\n\n"+
-                                        "Temperatura: " + temperatura + " °C\n" +
-                                        "Humedad Relativa: " + humedad + " % [R.H.]\n" +
-                                        "Luminaria # 1: " + l1 + "\n" +
-                                        "Luminaria # 2: " + l2 + "\n" +
-                                        "Luminaria # 3: " + l3 + "\n" +
-                                        "Luminaria # 4: " + l4 + "\n" +
-                                        "Luminaria # 5: " + l5 + "\n" +
-                                        "Luminaria # 6: " + l6 + "\n" +
-                                        "Luminaria # 7: " + l7 + "\n" +
-                                        "Luminaria # 8: " + l8 + "\n\n" +
-                                        "Fecha: " + fecha + "\n" +
-                                        "Hora: " + hora + "\n\n" +
-                                        "-------------------------------------------" + "\n" +
-                                        "sms send: " + date + "\n\t\t\t\t\t\t\t\t" +
-                                        time + "\n" +
-                                        "-------------------------------------------" + "\n" +
-                                        "UTLA  2018~2019";
-                                try{
-                                    SmsManager sms = SmsManager.getDefault();
-                                    //sms.sendTextMessage(numTel, null, datosCompletos, null,null);  //FUNCION LIMITADO A MENOS CARACTERES POR SMS
-                                    ArrayList msgTexts = sms.divideMessage(datosCompletos);
-                                    sms.sendMultipartTextMessage(infoConfDestinatarioTel2(context), null, msgTexts, null,null);
-                                    //Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
-                                    Toast toast = Toast.makeText(context, "MENSAJE ENVIADO A MÓVIL: " + infoConfDestinatarioTel2(context), Toast.LENGTH_LONG);
-                                    toast.setGravity(Gravity.CENTER, 0, 0);
-                                    toast.show();
+                                    String datosCompletos = "SMS BY SYSTEM UTLA.\n\n" +
+                                            "Estado de Variables del Sistema.\n\n" +
+                                            "Temperatura: " + temperatura + " °C\n" +
+                                            "Humedad Relativa: " + humedad + " % [R.H.]\n" +
+                                            "Luminaria # 1: " + l1 + "\n" +
+                                            "Luminaria # 2: " + l2 + "\n" +
+                                            "Luminaria # 3: " + l3 + "\n" +
+                                            "Luminaria # 4: " + l4 + "\n" +
+                                            "Luminaria # 5: " + l5 + "\n" +
+                                            "Luminaria # 6: " + l6 + "\n" +
+                                            "Luminaria # 7: " + l7 + "\n" +
+                                            "Luminaria # 8: " + l8 + "\n\n" +
+                                            "Fecha: " + fecha + "\n" +
+                                            "Hora: " + hora + "\n\n" +
+                                            "-------------------------------------------" + "\n" +
+                                            "sms send: " + date + "\n\t\t\t\t\t\t\t\t" +
+                                            time + "\n" +
+                                            "-------------------------------------------" + "\n" +
+                                            "UTLA  2018~2019";
+                                    try {
+                                        SmsManager sms = SmsManager.getDefault();
+                                        //sms.sendTextMessage(numTel, null, datosCompletos, null,null);  //FUNCION LIMITADO A MENOS CARACTERES POR SMS
+                                        ArrayList msgTexts = sms.divideMessage(datosCompletos);
+                                        sms.sendMultipartTextMessage(infoConfDestinatarioTel2(context), null, msgTexts, null, null);
+                                        //Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
+                                        Toast toast = Toast.makeText(context, "MENSAJE ENVIADO A MÓVIL: " + infoConfDestinatarioTel2(context), Toast.LENGTH_LONG);
+                                        toast.setGravity(Gravity.CENTER, 0, 0);
+                                        toast.show();
+                                    } catch (Exception e) {
+                                        Toast.makeText(context, "Mensaje no enviado, datos incorrectos." + e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                                        e.printStackTrace();
+                                    }
                                 }
-                                catch (Exception e){
-                                    Toast.makeText(context, "Mensaje no enviado, datos incorrectos." + e.getMessage().toString(), Toast.LENGTH_LONG).show();
-                                    e.printStackTrace();
-                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        pd.hide();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        if(error != null){
-                            Toast.makeText(context, "Algo salió mal.", Toast.LENGTH_LONG).show();
                             pd.hide();
                         }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            if (error != null) {
+                                Toast.makeText(context, "Algo salió mal.", Toast.LENGTH_LONG).show();
+                                pd.hide();
+                            }
+                        }
                     }
-                }
-        );
-        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+            );
+            MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+        }
     }
     /*FIN*/
 

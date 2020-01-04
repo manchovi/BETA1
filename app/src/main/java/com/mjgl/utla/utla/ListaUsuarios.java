@@ -1,5 +1,6 @@
 package com.mjgl.utla.utla;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -63,6 +65,21 @@ public class ListaUsuarios extends AppCompatActivity {
 
         lvUsuarios = (ListView)findViewById(R.id.lvUsuarios);
         userList = new ArrayList<>();
+
+
+        lvUsuarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                dto a = (dto) parent.getItemAtPosition(position);
+                AlertDialog.Builder al = new AlertDialog.Builder(ListaUsuarios.this);
+                al.setCancelable(true);
+                al.setTitle("Detalle Usuario");
+                al.setMessage(a.getUser()+ " " + a.getNombres() + " " + a.getApellidos() + " " + a.getPregunta());
+                //al.setMessage(a.tostring());
+                al.show();
+
+            }
+        });
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();

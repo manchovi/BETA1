@@ -832,6 +832,9 @@ public class MainActivity extends AppCompatActivity
         sm.execute();
     }
 
+
+
+
     /*
        INICIO
        Despues veré como reducir este código con la aplicación de la herencia.
@@ -3076,78 +3079,88 @@ public class MainActivity extends AppCompatActivity
         dialogo1.show();
     }
 
+
     public void EnviarSMS() {
-        pd.show();
-        String pc = infoSharedPreferences();
-        String url = pc + "/grafica5.php";
-        //String url = pc + "/service/grafica5.php";
+        String servidor = conf_Server();
+        if (servidor.equals("Sin configurar.")) {
+            mensaje1();
+        } else {
 
-        //String url = "http://" + pc + "/service/grafica5.php";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                url,
-                new Response.Listener<String>() {
-                    @RequiresApi(api = Build.VERSION_CODES.M)
-                    @SuppressLint("ResourceType")
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("string", response);
-                        try {
-                            //System.out.println("RESPUESTA DE SERVIDOR : "+response);
-                            //Toast.makeText(grafica5.this, response, Toast.LENGTH_LONG).show();
-                            JSONArray jsonarray = new JSONArray(response);
-                            String cadena = "";
+            pd.show();
+            String pc = infoSharedPreferences();
+            String url = pc + "/grafica5.php";
+            //String url = pc + "/service/grafica5.php";
 
-                            for (int i = 0; i < jsonarray.length(); i++) {
-                                JSONObject jsonobject = jsonarray.getJSONObject(i);
-                                double temperatura = jsonobject.getDouble("temperatura");          //Valores de la base de datos.
-                                double humedad = jsonobject.getDouble("humedad");
-                                String fecha = jsonobject.getString("fecha").trim();
-                                String hora = jsonobject.getString("hora").trim();
+            //String url = "http://" + pc + "/service/grafica5.php";
+            StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                    url,
+                    new Response.Listener<String>() {
+                        @RequiresApi(api = Build.VERSION_CODES.M)
+                        @SuppressLint("ResourceType")
+                        @Override
+                        public void onResponse(String response) {
+                            Log.d("string", response);
+                            try {
+                                //System.out.println("RESPUESTA DE SERVIDOR : "+response);
+                                //Toast.makeText(grafica5.this, response, Toast.LENGTH_LONG).show();
+                                JSONArray jsonarray = new JSONArray(response);
+                                String cadena = "";
 
-                                //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
-                                DateFormat formatodate = new SimpleDateFormat("yyyy/MM/dd");
-                                String date = formatodate.format(new Date());
+                                for (int i = 0; i < jsonarray.length(); i++) {
+                                    JSONObject jsonobject = jsonarray.getJSONObject(i);
+                                    double temperatura = jsonobject.getDouble("temperatura");          //Valores de la base de datos.
+                                    double humedad = jsonobject.getDouble("humedad");
+                                    String fecha = jsonobject.getString("fecha").trim();
+                                    String hora = jsonobject.getString("hora").trim();
 
-                                DateFormat formatotime = new SimpleDateFormat("HH:mm:ss a");
-                                String time = formatotime.format(new Date());
-                                String datosCompletos = "SMS UTLA.\n" +
-                                        "Temperatura: " + temperatura + " °C\n" +
-                                        "Humedad: " + humedad + " RH\n" +
-                                        "Fecha: " + fecha + "\n" +
-                                        "Hora: " + hora + "\n" +
-                                        "by system UTLA";
-                                try {
-                                    SmsManager sms = SmsManager.getDefault();
-                                    //sms.sendTextMessage(numTel, null, datosCompletos, null,null);  //FUNCION LIMITADO A MENOS CARACTERES POR SMS
-                                    ArrayList msgTexts = sms.divideMessage(datosCompletos);
-                                    sms.sendMultipartTextMessage(infoConfDestinatarioTel2(), null, msgTexts, null, null);
-                                    //Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
-                                    Toast toast = Toast.makeText(getApplicationContext(), "MENSAJE ENVIADO A MÓVIL: " + infoConfDestinatarioTel2(), Toast.LENGTH_LONG);
-                                    toast.setGravity(Gravity.CENTER, 0, 0);
-                                    toast.show();
-                                } catch (Exception e) {
-                                    Toast.makeText(getApplicationContext(), "Mensaje no enviado, datos incorrectos." + e.getMessage().toString(), Toast.LENGTH_LONG).show();
-                                    e.printStackTrace();
+                                    //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
+                                    DateFormat formatodate = new SimpleDateFormat("yyyy/MM/dd");
+                                    String date = formatodate.format(new Date());
+
+                                    DateFormat formatotime = new SimpleDateFormat("HH:mm:ss a");
+                                    String time = formatotime.format(new Date());
+                                    String datosCompletos = "SMS UTLA.\n" +
+                                            "Temperatura: " + temperatura + " °C\n" +
+                                            "Humedad: " + humedad + " RH\n" +
+                                            "Fecha: " + fecha + "\n" +
+                                            "Hora: " + hora + "\n" +
+                                            "by system UTLA";
+                                    try {
+                                        SmsManager sms = SmsManager.getDefault();
+                                        //sms.sendTextMessage(numTel, null, datosCompletos, null,null);  //FUNCION LIMITADO A MENOS CARACTERES POR SMS
+                                        ArrayList msgTexts = sms.divideMessage(datosCompletos);
+                                        sms.sendMultipartTextMessage(infoConfDestinatarioTel2(), null, msgTexts, null, null);
+                                        //Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
+                                        Toast toast = Toast.makeText(getApplicationContext(), "MENSAJE ENVIADO A MÓVIL: " + infoConfDestinatarioTel2(), Toast.LENGTH_LONG);
+                                        toast.setGravity(Gravity.CENTER, 0, 0);
+                                        toast.show();
+                                    } catch (Exception e) {
+                                        Toast.makeText(getApplicationContext(), "Mensaje no enviado, datos incorrectos." + e.getMessage().toString(), Toast.LENGTH_LONG).show();
+                                        e.printStackTrace();
+                                    }
                                 }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        pd.hide();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        if (error != null) {
-                            Toast.makeText(getApplicationContext(), "Algo salió mal.", Toast.LENGTH_LONG).show();
                             pd.hide();
                         }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            if (error != null) {
+                                Toast.makeText(getApplicationContext(), "Algo salió mal.", Toast.LENGTH_LONG).show();
+                                pd.hide();
+                            }
+                        }
                     }
-                }
-        );
-        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+            );
+            MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+        }
     }
+
+
+
 
     public void grafpastel() {
         String comprobacion = conf_Server();
@@ -3186,6 +3199,23 @@ public class MainActivity extends AppCompatActivity
         return server;
     }
 
+    private String conf_folder() {
+        //Buscando datos en archivo credenciales.xml
+        SharedPreferences preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String folder = preferences.getString("folder", "Sin configurar aun.");
+        return folder;
+    }
+
+
+    private String infoSharedPreferences() {
+        //Buscando datos en archivo credenciales.xml
+        SharedPreferences preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String server = preferences.getString("servidor", "Sin configurar aun.");
+        String folder = preferences.getString("folder", "Sin configurar aun.");
+        return server + folder;
+    }
+
+
     private void mensaje1() {
         Toast.makeText(this, "No se ha configurado.", Toast.LENGTH_SHORT).show();
     }
@@ -3207,14 +3237,6 @@ public class MainActivity extends AppCompatActivity
 
     public void close(View view) {
         finish();
-    }
-
-    private String infoSharedPreferences() {
-        //Buscando datos en archivo credenciales.xml
-        SharedPreferences preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
-        String server = preferences.getString("servidor", "Sin configurar aun.");
-        String folder = preferences.getString("folder", "Sin configurar aun.");
-        return server + folder;
     }
 
     public void enviar_email() {
@@ -3398,6 +3420,10 @@ public class MainActivity extends AppCompatActivity
             MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
         }
     }
+
+
+
+
 
     private void config_server() {
         final android.app.AlertDialog.Builder mBuilder = new android.app.AlertDialog.Builder(MainActivity.this);

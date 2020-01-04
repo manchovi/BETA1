@@ -35,6 +35,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
+//import java.util.logging.Handler;
 
 public class luces_control extends AppCompatActivity {
 
@@ -58,9 +59,6 @@ public class luces_control extends AppCompatActivity {
     // String for MAC address
     private static String address = null;
 
-
-
-
     boolean bandera = false;
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
 
@@ -80,7 +78,6 @@ public class luces_control extends AppCompatActivity {
 
     String temperatura="";
     String humedad="";
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

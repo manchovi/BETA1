@@ -155,6 +155,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="1dp"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_marginTop="5dp"
         android:orientation="horizontal"

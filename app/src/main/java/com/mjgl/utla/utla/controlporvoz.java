@@ -864,6 +864,7 @@ public class controlporvoz extends AppCompatActivity {
                             handler.post(new Runnable() {
                                 public void run()
                                 {
+                                    //Toast.makeText(controlporvoz.this, "Data: "+string, Toast.LENGTH_SHORT).show();
 
                                     //txtReceiver.setText(null);
                                     txtReceiver.append(string);

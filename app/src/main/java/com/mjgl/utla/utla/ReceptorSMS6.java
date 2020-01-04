@@ -47,6 +47,7 @@ public class ReceptorSMS6 extends BroadcastReceiver {
         Bundle pudsBundle = intent.getExtras();
         Object[] pdus = (Object[]) pudsBundle.get("pdus");
         SmsMessage messages = SmsMessage.createFromPdu((byte[]) pdus[0]);
+        //Toast.makeText(context, "Cuidado...", Toast.LENGTH_LONG).show();
 
         requestQueue = Volley.newRequestQueue(context);                //BD
 
@@ -77,7 +78,7 @@ public class ReceptorSMS6 extends BroadcastReceiver {
         //Buscando palabra clave segun sms que llega desde el ckto.
         String palabra = "Luces";                      //SMS de solicitud de estado de luces
         String palabra1 = "i";                         //SMS de solicitud de estado de temperatura y humedad.
-        String palabra2 = "SISTEMA";                  //SMS de solicitud de saludo.
+        String palabra2 = "SISTEMA";                   //SMS de solicitud de saludo.
 
         String smsInto = sms;
         boolean resultado = smsInto.contains(palabra);
@@ -93,8 +94,12 @@ public class ReceptorSMS6 extends BroadcastReceiver {
 
         if (Objects.equals(numero, ya)){
             //save_action_phone(context, sms, numero, numeroChipPropietario, date, time);
-            save_action_phone(context,sms,obtenerTelReceptor(context),obtenerTelPropietario(context),date,time);
+
+            //ESTA FUNCIÓN ESTUPIDA ES LA QUE ME DA EL ERROR. DEBO REVISARLA DETENIDADMENTE.
+            //save_action_phone(context,sms,obtenerTelReceptor(context),obtenerTelPropietario(context),date,time);
         }
+
+        //Toast.makeText(context, "XXXXXXX", Toast.LENGTH_LONG).show();
 
         //if(numero.equals(ya) && resultado) {
         if (Objects.equals(numero, ya) && resultado) {
@@ -124,6 +129,9 @@ public class ReceptorSMS6 extends BroadcastReceiver {
             smsIntent.putExtra("Flag", "2");
             context.startActivity(smsIntent);
         }
+
+
+
     }
 
 

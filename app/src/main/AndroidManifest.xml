@@ -78,7 +78,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.mjgl.utla.utla.DashboardLuces" />
+        <activity android:name="com.mjgl.utla.utla.DashboardLuces" >
+
+        </activity>
         <activity android:name="com.mjgl.utla.utla.graficaBarrasTH" />
         <activity android:name="com.mjgl.utla.utla.configuracionUserMaster" />
         <!--

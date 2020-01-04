@@ -58,7 +58,8 @@ public class UsersAdapter extends ArrayAdapter<dto>{
         TextView tvRespuesta = (TextView)view.findViewById(R.id.tvRespuesta);
         TextView tvFechaHora = (TextView)view.findViewById(R.id.tvFechaHora);
 
-        //Toast.makeText(mCtx, ""+datos.getCodigo(), Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(mCtx, ""+datos, Toast.LENGTH_SHORT).show();
 
         //tvCodigo.setText(datos.getCodigo());
         tvNombres.setText(datos.getNombres() + " " + datos.getApellidos());
