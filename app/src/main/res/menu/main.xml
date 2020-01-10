@@ -79,7 +79,7 @@
 
     <item
         android:id="@+id/menu_send_email"
-        android:title="Enviar E-mail T. °C y RH [%]"
+        android:title="Enviar E-mail"
         android:icon="@drawable/ic_person3"
         app:showAsAction="never"
         android:orderInCategory="8"/>

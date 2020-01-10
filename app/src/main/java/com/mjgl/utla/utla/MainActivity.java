@@ -62,6 +62,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -759,6 +760,8 @@ public class MainActivity extends AppCompatActivity
                                 String fecha = jsonobject.getString("fecha").trim();
                                 String hora = jsonobject.getString("hora").trim();
 
+                                //Toast.makeText(MainActivity.this, "E-mail Destinatario: "+ infoConfDestinatarioEmail1(), Toast.LENGTH_SHORT).show();
+
                                 //sendEmail(infoConfDestinatarioEmail1(), asunto, temperatura, humedad, fecha, hora);
                                 sendEmail(infoConfDestinatarioEmail1(), asunto, temperatura, humedad, l1, l2, l3, l4, l5, l6, l7, l8, fecha, hora);
                                 //et_T.setText(temperatura + "");
@@ -802,11 +805,17 @@ public class MainActivity extends AppCompatActivity
         DateFormat formatotime = new SimpleDateFormat("HH:mm:ss a");
         String time = formatotime.format(new Date());
 
-        String message = "*********************************\n" +
-                "E-MAIL BY SYSTEM UTLA.\n" +
-                "*********************************\n" +
-                "Estado de Variables del Sistema.\n\n" +
-                "*Temperatura: " + temperatura + " °C.\n" +
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        String message = "*************************************************************\n" +
+                "Reporte de última actualización en la base de datos.\n" +
+                "*************************************************************\n" +
+                "\nINFORMACIÓN RECOPILADA.\n\n" +
+                //"*Temperatura: " + temperatura + " °C.\n" +
+                //"*Temperatura: " + temperatura + " °C.\n" +
+                //"*Temperatura: " + temperatura + "°C ~ " + (((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32) + " °F.\n" +
+                //"*Temperatura: " + temperatura + "°C ~ " + String.format("%.2f",((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32))) + " °F.\n" +
+                "*Temperatura: " + temperatura + "°C ~ " + df.format(((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32.0))) + " °F.\n" +
                 "*Humedad Relativa: " + humedad + " % [R.H.].\n" +
                 "*Luminaria # 1: " + l1 + "\n" +
                 "*Luminaria # 2: " + l2 + "\n" +
@@ -816,13 +825,12 @@ public class MainActivity extends AppCompatActivity
                 "*Luminaria # 6: " + l6 + "\n" +
                 "*Luminaria # 7: " + l7 + "\n" +
                 "*Luminaria # 8: " + l8 + "\n" +
-                "Fecha: " + fecha + "\n" +
-                "Hora: " + hora + "\n\n" +
-                "-------------------------------------------" + "\n" +
-                "sms send: " + date + "\n\t\t\t\t\t\t\t\t" +
-                time + "\n" +
-                "-------------------------------------------" + "\n" +
-                "Copyright(c) UTLA 2018~2019. " +
+                "\nFecha y Hora de la última actualización: " +
+                "Fecha: " + fecha + " / " + hora + "\n\n" +
+                "---------------------------------------------------------------------" + "\n" +
+                "\t\tMensaje Generado: " + date + " ~ " + time + "\n" +
+                "---------------------------------------------------------------------" + "\n" +
+                "Copyright(c) UTLA 2019~2020. " +
                 "\nAll rights reserved.";
 
         //Creating SendMail object
@@ -3354,6 +3362,39 @@ public class MainActivity extends AppCompatActivity
                                 emailIntent.setType("message/rfc822");
                                 startActivity(Intent.createChooser(emailIntent, "Email "));*/
 
+                                    DecimalFormat df = new DecimalFormat("#.00");
+                                    //double t= Double.parseDouble(df.format(temperatura));
+                                    //double convertemperatura = (t * 1.8)+32;
+
+                                    //Double x = Double.parseDouble(String.format("%.2f", temperatura));
+                                    //double cv =((x * 1.8)+32.0);
+                                   // String r = String.valueOf(cv);
+
+                                    String message = "*********************************\n" +
+                                            "Reporte de última actualización \nen la base de datos.\n" +
+                                            "*********************************\n" +
+                                            "\nINFORMACIÓN RECOPILADA.\n\n" +
+                                            //"*Temperatura: " + temperatura + " °C.\n" +
+                                            //"*Temperatura: " + temperatura + "°C ~ " + (((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32) + " °F.\n" +
+                                            //"*Temperatura: " + temperatura + "°C ~ " + String.format("%.2f",((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32))) + " °F.\n" +
+                                            "*Temperatura: " + temperatura + "°C ~ " + df.format(((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32.0))) + " °F.\n" +
+                                            "*Humedad Relativa: " + humedad + " % [R.H.].\n" +
+                                            "*Luminaria # 1: " + l1 + "\n" +
+                                            "*Luminaria # 2: " + l2 + "\n" +
+                                            "*Luminaria # 3: " + l3 + "\n" +
+                                            "*Luminaria # 4: " + l4 + "\n" +
+                                            "*Luminaria # 5: " + l5 + "\n" +
+                                            "*Luminaria # 6: " + l6 + "\n" +
+                                            "*Luminaria # 7: " + l7 + "\n" +
+                                            "*Luminaria # 8: " + l8 + "\n" +
+                                            "\nFecha y hora de la última actualización: " +
+                                            "Fecha: " + fecha + " / " + hora + "\n\n" +
+                                            "-------------------------------------------------------" + "\n" +
+                                            "Mensaje Generado: " + date + " ~ " + time + "\n" +
+                                            "-------------------------------------------------------" + "\n" +
+                                            "Copyright(c) UTLA 2019~2020. " +
+                                            "\nAll rights reserved.";
+
                                     //Instanciamos un Intent del tipo ACTION_SEND
                                     Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
                                     //emailIntent.setData(Uri.parse("mailto:"));
@@ -3372,27 +3413,11 @@ public class MainActivity extends AppCompatActivity
                                     // Aqui definimos un Asunto para el Email
                                     //emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "El Asunto");
                                     emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Reporte del Sistema UTLA");
+
                                     // Aqui obtenemos la referencia al texto y lo pasamos al Email Intent
-                                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,
-                                            "Estado de Variables del Sistema.\n\n" +
-                                                    "Temperatura: " + temperatura + " °C\n" +
-                                                    "Humedad Relativa: " + humedad + " % [R.H.]\n" +
-                                                    "Luminaria # 1: " + l1 + "\n" +
-                                                    "Luminaria # 2: " + l2 + "\n" +
-                                                    "Luminaria # 3: " + l3 + "\n" +
-                                                    "Luminaria # 4: " + l4 + "\n" +
-                                                    "Luminaria # 5: " + l5 + "\n" +
-                                                    "Luminaria # 6: " + l6 + "\n" +
-                                                    "Luminaria # 7: " + l7 + "\n" +
-                                                    "Luminaria # 8: " + l8 + "\n\n" +
-                                                    "Fecha: " + fecha + "\n" +
-                                                    "Hora: " + hora + "\n\n" +
-                                                    "-------------------------------------------" + "\n" +
-                                                    "sms send: " + date + "\n\t\t\t\t\t\t\t\t" +
-                                                    time + "\n" +
-                                                    "-------------------------------------------" + "\n" +
-                                                    "UTLA 2018~2019");
+                                    emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);    //Mensaje Enviado por Whatsapp
                                     //emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.my_text));
+
                                     try {
                                         //Enviamos el Correo iniciando una nueva Activity con el emailIntent.
                                         startActivity(Intent.createChooser(emailIntent, getNameBD() + " \nSeleccione medio para compartir información Temp °C y RH."));

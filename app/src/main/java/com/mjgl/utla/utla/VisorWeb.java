@@ -1,6 +1,7 @@
 package com.mjgl.utla.utla;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -70,9 +72,28 @@ public class VisorWeb extends AppCompatActivity {
         setContentView(R.layout.activity_visor_web);
 
         visor = (WebView) findViewById(R.id.webView);
+        visor.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                //Verifica si es .pdf
+                if (url.toLowerCase().endsWith(".pdf")){
+                    //Crea un Intent para abrir un archivo con MIME TYPE application/pdf
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setDataAndType(Uri.parse(url), "application/pdf");
+                    try{
+                        view.getContext().startActivity(intent);
+                    } catch (ActivityNotFoundException e) {
+                        //Error!
+                    }
+                } else {  //Si no es .pdf simplemente carga la url en el WebView.
+                    visor.loadUrl(url);
+                }
+                return true;
+            }
+        });
 
         //Función para evitar la rotación de la pantalla del CELULAR.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);  //He comentariado esta línea para rotar pantalla.
         //y esto para pantalla completa (oculta incluso la barra de estado)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -137,8 +158,9 @@ public class VisorWeb extends AppCompatActivity {
             //habilitamos los plugins (flash)
             //visor.getSettings().setPluginsEnabled(true);
 
+            //String porta = obtenerServer();
             String porta = obtenerServer();
-            visor.loadUrl(porta);
+            visor.loadUrl(porta + "/home1.php");
             //visor.loadUrl("http://mjgl.com.sv/portalutla/index.php");
 
 
