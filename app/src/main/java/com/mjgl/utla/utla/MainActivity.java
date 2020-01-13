@@ -806,7 +806,6 @@ public class MainActivity extends AppCompatActivity
         String time = formatotime.format(new Date());
 
         DecimalFormat df = new DecimalFormat("#.00");
-
         String message = "*************************************************************\n" +
                 "Reporte de última actualización en la base de datos.\n" +
                 "*************************************************************\n" +

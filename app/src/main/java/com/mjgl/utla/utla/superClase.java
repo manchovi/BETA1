@@ -32,6 +32,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -231,13 +232,8 @@ public class superClase{
 
                                     DateFormat formatotime = new SimpleDateFormat("HH:mm:ss a");
                                     String time = formatotime.format(new Date());
-                                /*String datosCompletos = "SMS UTLA.\n" +
-                                        "Temperatura: " + temperatura + " °C\n" +
-                                        "Humedad: " + humedad + " RH\n" +
-                                        "Fecha: "  + fecha + "\n" +
-                                        "Hora: " + hora + "\n" +
-                                        "by system UTLA";*/
-                                    String datosCompletos = "SMS BY SYSTEM UTLA.\n\n" +
+
+                                /*String datosCompletos = "SMS BY SYSTEM UTLA.\n\n" +
                                             "Estado de Variables del Sistema.\n\n" +
                                             "Temperatura: " + temperatura + " °C\n" +
                                             "Humedad Relativa: " + humedad + " % [R.H.]\n" +
@@ -255,7 +251,35 @@ public class superClase{
                                             "sms send: " + date + "\n\t\t\t\t\t\t\t\t" +
                                             time + "\n" +
                                             "-------------------------------------------" + "\n" +
-                                            "UTLA  2018~2019";
+                                            "UTLA  2018~2019";*/
+
+                                    DecimalFormat df = new DecimalFormat("#.00");
+                                    String datosCompletos = "*************************************************************\n" +
+                                            "Reporte de última actualización en la base de datos.\n" +
+                                            "*************************************************************\n" +
+                                            "\nINFORMACIÓN RECOPILADA.\n\n" +
+                                            //"*Temperatura: " + temperatura + " °C.\n" +
+                                            //"*Temperatura: " + temperatura + " °C.\n" +
+                                            //"*Temperatura: " + temperatura + "°C ~ " + (((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32) + " °F.\n" +
+                                            //"*Temperatura: " + temperatura + "°C ~ " + String.format("%.2f",((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32))) + " °F.\n" +
+                                            "*Temperatura: " + temperatura + "°C ~ " + df.format(((((Double.parseDouble(String.valueOf(temperatura)))*1.8)+32.0))) + " °F.\n" +
+                                            "*Humedad Relativa: " + humedad + " % [R.H.].\n" +
+                                            "*Luminaria # 1: " + l1 + "\n" +
+                                            "*Luminaria # 2: " + l2 + "\n" +
+                                            "*Luminaria # 3: " + l3 + "\n" +
+                                            "*Luminaria # 4: " + l4 + "\n" +
+                                            "*Luminaria # 5: " + l5 + "\n" +
+                                            "*Luminaria # 6: " + l6 + "\n" +
+                                            "*Luminaria # 7: " + l7 + "\n" +
+                                            "*Luminaria # 8: " + l8 + "\n" +
+                                            "\nFecha y Hora de la última actualización: " +
+                                            "Fecha: " + fecha + " / " + hora + "\n\n" +
+                                            "---------------------------------------------------------------------" + "\n" +
+                                            "\t\tMensaje Generado: " + date + " ~ " + time + "\n" +
+                                            "---------------------------------------------------------------------" + "\n" +
+                                            "Copyright(c) UTLA 2019~2020. " +
+                                            "\nAll rights reserved.";
+
                                     try {
                                         SmsManager sms = SmsManager.getDefault();
                                         //sms.sendTextMessage(numTel, null, datosCompletos, null,null);  //FUNCION LIMITADO A MENOS CARACTERES POR SMS
